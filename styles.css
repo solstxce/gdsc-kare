@@ -14,16 +14,42 @@ body{
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );backdrop-filter: blur( 20px );-webkit-backdrop-filter: blur( 4px );border-radius: 10px;border: 1px solid rgba( 255, 255, 255, 0.18 );
     backdrop-filter: blur(20px);
 }
+.section,
+.spacer {
+  height: 100vh;
+  font-family: 'Poppins', cursive;
+}
+
+.spacer:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50vh;
+}
+
+#text {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 700;
+}
 .navbar {
+    /* position: absolute; */
     font-family: '4UaGrENHsxJlGDuGo1OIlL3Owp4','Poppins',Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: #333;
     overflow: hidden;
-    padding-top: 8px;
+    padding-top: 12px;
     /* padding-bottom: 4px; */
     border-radius: 10px;
     font-weight: bold;
+    width: 100%;
+    top:0%;
+    margin-bottom: 10px;
 
   }
+.fullPage{
+    margin-top: 50px;
+}
 .gdsc-logo{
     width:50px;
     margin-right: 100vh;
@@ -43,13 +69,13 @@ a.logo-image:hover{
     padding-right: 10vh;
 }
 .navbar a:hover {
-
+    /* position: absolute; */
     background-color: #bd6969;
     color: black;
     border-radius: 9px;
 }
 #gdsc-logo {
-    /* position: relative; */
+    /* position: fixed; */
     width: calc((256/125)*50);
     height: 50px;
     overflow: visible; /* Allow overflow for the text */
@@ -86,6 +112,52 @@ a.logo-image:hover{
     transform: translateY(0);
     font-size: 20px;
   }
+h1{
+    font-family: '4UaGrENHsxJlGDuGo1OIlL3Owp4','Poppins',Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    top: 8px;
+    left: 16px;
+    /* font-size: 18px; */
+    position: absolute;
+    vertical-align: text-top;
+    font-weight: bold;
+    font-size: 110px;
+    fill:#fff;
+    color:#ff7f0f;
+}
+.s1{
+    background-image: url("images/Page-Connect.jpeg.png");
+    /* background: rgba(30, 30, 30, .7); */
+    background-size: cover;
+
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin-left: 20px;
+    padding-right: 20px;
+    width: 187vh;
+    height: 79vh;
+    justify-content:start
+    h1{
+        /* padding-top: 30px; */
+        color:white
+    }
+}
+.blur-pannel{
+    /* display: flex; */
+    background: rgba(30, 30, 30, .7);
+    backdrop-filter: blur(10px);
+    width:87vh;
+    /* position:fixed; */
+    height:69.5vh;
+    top:0%;
+    left:0%; 
+    padding-top:10px;
+    /* justify-content:start; */
+    vertical-align: top;
+    text-align: left;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    /* transform: rotate(90deg) */
+}
 /* #gdsc-logo {
     position: relative;
     width: calc((256/125)*25)px;

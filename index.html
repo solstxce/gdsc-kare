@@ -13,10 +13,24 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css" integrity="sha512-otONSJGv1l0LjJXcgyqi2MeKXtnthkiXAleeQjFJOKYcVD5u+mOuPb7xCnlsb74Ld+N0ONbP7KYRmW2/OWrvaA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css" />
     <title>Sol's first page</title>
+    <style>
+            .blur-pannel::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(10px); /* Adjust the blur strength as needed */
+        z-index: -1;
+      }
+    </style>
   </head>
   <body>
+    
     <nav class="navbar">
       <ul>
         <li>
@@ -89,5 +103,51 @@
         <li><a href="/feedback" class="feedback">Feedback</a></li>
       </ul>
     </nav>
+    <div id="fullPage">
+        <div class="section s1 spacer">
+            <div class="blur-pannel"></div>
+            <h1>Connect.</h1>
+        </div>
+        
+        <div class="section s2 spacer">
+            <!-- <div class="blur-pannel"></div> -->
+            <h1 class="blur-pannel">Code.</h1>
+        </div>
+
+        <div class="section s3 spacer">
+            <!-- <div class="blur-pannel"></div> -->
+            <h1 class="blur-pannel">Create.</h1>
+        </div>
+    </div>
+    <script>
+        var myText = "Avec le temps, on apprend que rien n’est éternel…";
+let myTextLength = myText.length;
+
+function typing( displayedLength ) {
+  if( displayedLength <= myTextLength ) {
+    $( "#text" ).text( myText.substring( 0, displayedLength ) );
+    }
+  }
+
+var controller = new ScrollMagic.Controller();
+var typewritingOnScroll = new TimelineMax();
+
+var typewritingScene = new ScrollMagic.Scene({ triggerElement: "#text", duration: 300 })
+    .on('progress',  function () {
+      let scrollProgress = Math.ceil( typewritingScene.progress() * myTextLength );
+      typing( scrollProgress );
+    })
+    
+ .setPin('#text')
+ .addIndicators({ name: 'typewriting' })
+ .setTween(typewritingOnScroll)
+ .addTo( controller );
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js" integrity="sha512-LGiXf+jHGTHcIybSsOWO3I/in+OObCkcEsWIZ7IyhzfD6RzD5qDUw2CK+JveuI7zTSEcDG//bIOvOpAJW2BWsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        new fullpage('#fullPage',{
+            autoScrolling:true
+        })
+    </script>
   </body>
 </html>
