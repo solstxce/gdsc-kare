@@ -1,0 +1,126 @@
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar a.logo-image:hover{
+    background-color: transparent; text-decoration: none;
+}
+body{
+    background-image: url("images/Untitled.png");
+    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 90%);
+
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );backdrop-filter: blur( 20px );-webkit-backdrop-filter: blur( 4px );border-radius: 10px;border: 1px solid rgba( 255, 255, 255, 0.18 );
+    backdrop-filter: blur(20px);
+}
+.navbar {
+    font-family: '4UaGrENHsxJlGDuGo1OIlL3Owp4','Poppins',Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #333;
+    overflow: hidden;
+    padding-top: 8px;
+    /* padding-bottom: 4px; */
+    border-radius: 10px;
+    font-weight: bold;
+
+  }
+.gdsc-logo{
+    width:50px;
+    margin-right: 100vh;
+}
+a.logo-image:hover{
+    background-color: transparent; text-decoration: none
+}
+.navbar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.feedback{
+    padding-right: 10vh;
+}
+.navbar a:hover {
+
+    background-color: #bd6969;
+    color: black;
+    border-radius: 9px;
+}
+#gdsc-logo {
+    /* position: relative; */
+    width: calc((256/125)*50);
+    height: 50px;
+    overflow: visible; /* Allow overflow for the text */
+    padding-right: 90vh;
+  }
+
+  #left-part,
+  #right-part {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(0px);
+  }
+
+  #gdsc-logo:hover #left-part {
+    transform: scaleX(1);
+  }
+
+  #gdsc-logo:hover #right-part {
+    
+    transform: translateX(120vh); /* Adjust the offset as needed */
+  }
+
+  #chapter-name {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+    transform: translateY(100vh);
+    font-size: 104px;
+    fill: #ffffff; /* Change the fill color as needed */
+  }
+
+  #gdsc-logo:hover #chapter-name {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    font-size: 20px;
+  }
+/* #gdsc-logo {
+    position: relative;
+    width: calc((256/125)*25)px;
+    height: 25px;
+    margin-right: 100vh;
+  }
+
+  #left-part,
+  #right-part {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(0px);
+  }
+
+  #gdsc-logo:hover #left-part {
+    transform: scaleX(1);
+  }
+
+  #gdsc-logo:hover #right-part {
+      transform: translateX(100px);
+  }
+
+  #chapter-name {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+    transform: translateY(100%);
+    font-size: 20px;
+    fill: #000; /* Change the fill color as needed 
+    padding-left: 10px;
+  }
+
+  #gdsc-logo:hover #chapter-name {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    padding-left: 10px;
+    font-size: 17px;
+  } */
